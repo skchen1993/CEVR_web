@@ -157,3 +157,17 @@ span.highlight {
 	margin-left: 0.5em;
 	margin-right: 0.5em;
 }
+
+/*0725:CEVR*/
+/* Add the following CSS to your style sheet or in a <style> tag within the <head> of your HTML file */
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%; /* Ensure the image doesn't overflow its container */
+}
+
+.image-container img {
+  max-width: 100%; /* Resize the image to fit within its container */
+  height: auto; /* Preserve the aspect ratio of the image */
+}
