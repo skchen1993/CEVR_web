@@ -24,8 +24,6 @@
     <meta name="twitter:title" content="Zip-NeRF: Anti-Aliased Grid-Based Neural Radiance Fields" />
     <meta name="twitter:description" content="Neural Radiance Field training can be accelerated through the use of grid-based representations in NeRF's learned mapping from spatial coordinates to colors and volumetric density. However, these grid-based approaches lack an explicit understanding of scale and therefore often introduce aliasing, usually in the form of jaggies or missing scene content. Anti-aliasing has previously been addressed by mip-NeRF 360, which reasons about sub-volumes along a cone rather than points along a ray, but this approach is not natively compatible with current grid-based techniques. We show how ideas from rendering and signal processing can be used to construct a technique that combines mip-NeRF 360 and grid-based models such as Instant NGP to yield error rates that are 8%-77% lower than either prior technique, and that trains 24x faster than mip-NeRF 360." />
     <meta name="twitter:image" content="https://jonbarron.info/zipnerf/img/teaser.jpg" />
-
-
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -43,12 +41,11 @@
     <script src="js/app.js"></script>
     <script src="js/video_comparison.js"></script>
 </head>
-
 <body>
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b>Zip-NeRF</b>: Anti-Aliased Grid-Based Neural Radiance Fields</br> 
+                <b>CEVR</b>: Learning Continuous Exposure Value Representations for Single-Image HDR Reconstruction</br> 
                 <small>
                 ICCV 2023
                 </small>
@@ -58,31 +55,47 @@
             <div class="col-md-12 text-center">
                 <ul class="list-inline">
                     <li>
-                        <a href="https://jonbarron.info/">
-                          Jonathan T. Barron
+                        <a>
+                          Sykai Chen
                         </a>
+                        </br>NYCU
                     </li>
                     <li>
-                        <a href="http://bmild.github.io/">
-                            Ben Mildenhall
+                        <a>
+                          Hung-Lin Yen
                         </a>
+                        </br>NYCU
                     </li>
                     <li>
-                        <a href="http://dorverbin.github.io/">
-                          Dor Verbin
+                        <a href="https://yulunalexliu.github.io/">
+                          Yu-Lun Liu
                         </a>
+                        </br>NYCU
                     </li>
                     <li>
-                        <a href="https://pratulsrinivasan.github.io/">
-                          Pratul P. Srinivasan
+                        <a href="https://minhungchen.netlify.app/">
+                          Min-Hung Chen
                         </a>
+                        </br>NVIDIA
                     </li>
                     <li>
-                        <a href="https://phogzone.com/">
-                          Peter Hedman
+                        <a href="https://eborboihuc.github.io/">
+                          Hou-Ning Hu
                         </a>
+                        </br>MediaTek
                     </li>
-                    </br>Google
+                    <li>
+                        <a href="https://sites.google.com/g2.nctu.edu.tw/wpeng">
+                          Wen-Hsiao Peng
+                        </a>
+                        </br>NYCU
+                    </li>                    <li>
+                        <a href="https://sites.google.com/site/yylinweb/">
+                          Yen-Yu Lin
+                        </a>
+                        </br>NYCU
+                    </li>
+                    <!-- </br>NYCU -->
                 </ul>
             </div>
         </div>
