@@ -106,6 +106,7 @@
                     </ul>
                 </div>
         </div>
+<br>
 
         <div class="section">
           <!-- Icon Section -->
@@ -118,6 +119,7 @@
           </div>
         </div>
 
+<br>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -130,19 +132,7 @@ Deep learning is commonly used to produce impressive results in reconstructing H
         </div>
 
 
-<!--         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Video
-                </h3>
-                <div class="text-center">
-                    <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://youtu.be/Az8W2lGegcg" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
+<br>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -154,78 +144,6 @@ Deep learning is commonly used to produce impressive results in reconstructing H
             </div>
         </div>
 
-
-
-<br>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    360° Video Flythroughs
-                </h3>
-                <div class="text-center">
-                    <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://www.youtube.com/embed/videoseries?list=PLzPoYEE6Aw7Jzjek1uEIPnpcTDL3u8tb4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-                        <!-- <iframe src="https://youtube.com/embed/jbE2ri8xEZo" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe> -->
-                    </div>
-                </div>
-            </div>
-        </div>
-<br>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Multisampling
-                </h3>
-        <table style="width: 100%; border-collapse: collapse;">
-          <tr>
-            <td style="text-align: center;">
-                    <video id="v0" width="100%" autoplay loop muted>
-                      <source src="img/hexify_train.mp4" type="video/mp4" />
-                    </video>
-          </td>
-            <td style="text-align: center;">
-                    <video id="v0" width="100%" autoplay loop muted>
-                      <source src="img/hexify_test.mp4" type="video/mp4" />
-                    </video>
-          </td>
-          </tr>
-          <tr>
-            <td style="text-align: center;">When Training</td>
-            <td style="text-align: center;">When Rendering</td>
-          </tr>
-        </table>
-                <p class="text-justify">
-                    We use multisampling to approximate the average NGP feature over a conical frustum, by constructing a 6-sample pattern that exactly matches the frustum's first and second moments. When training, we randomly rotate and flip (along the ray axis) each pattern, and when rendering we deterministically flip and rotate each adjacent pattern by 30 degrees.
-                </p>
-            </div>
-        </div>
-<br>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    XY aliasing
-                </h3>
-                <video class="video" width=100% id="xyalias" loop playsinline autoplay muted src="img/xy_alias_swipe_crf27.mp4" onplay="resizeAndPlay(this)"></video>
-                <canvas height=0 class="videoMerge" id="xyaliasMerge"></canvas>
-                <p class="text-justify">
-                    A naive baseline (left) combining mip-NeRF 360 and Instant NGP results in aliasing as the camera moves laterally. Our full method (right) produces prefiltered renderings that do not flicker or shimmer.
-                </p>
-            </div>
-        </div>
-           
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Z aliasing
-                </h3>
-                <video id="v0" width="100%" autoplay loop muted>
-                  <source src="img/z_alias_pdf_labeled.m4v" type="video/mp4" />
-                </video>
-                <p class="text-justify">
-                    The proposal network used for resampling points along rays in mip-NeRF 360 results in an artifact we refer to as <em>z-aliasing</em>, where foreground content alternately appears and disappears as the camera moves toward or away from scene content. Z-aliasing occurs when the initial set of samples from the proposal network is not dense enough and misses thin structures, such as the chair above. Missed content can not be recovered by later rounds of sampling, since no future samples will be placed at that location along the ray. Our improvements to proposal network supervision result in a prefiltered proposal output that preserves the foreground object for all frames in this sequence. The plots above depict samples along a ray for three rounds of resampling (blue, orange, and green lines), with the y axis showing rendering weight (how much each interval contributes to the final rendered color), as a normalized probability density.
-                </p>
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -251,9 +169,9 @@ Deep learning is commonly used to produce impressive results in reconstructing H
                     Acknowledgements
                 </h3>
                 <p class="text-justify">
-                Thanks to Janne Kontkanen, Rick Szeliski, and David Salesin for their comments on the text, and to Ricardo Martin-Brualla, Keunhong Park, Ben Poole, Aleksander Hołyński, Etienne Pot, Kostas Rematas, Daniel Duckworth, Marcos Seefelder, Cardin Moffett, and Peter Zhizhin for their advice and help.
+                We gratefully acknowledge the support from MediaTek and Nvidia Inc., which made this research possible. We also thank NYCU for providing an excellent academic environment and research facilities.
                     <br><br>
-                The website template was borrowed from <a href="http://mgharbi.com/">Michaël Gharbi</a> and <a href="https://dorverbin.github.io/refnerf">Ref-NeRF</a>.
+                The website template was borrowed from <a href="https://github.com/jonbarron/website/">Jon Barron</a>.
                 </p>
             </div>
         </div>
