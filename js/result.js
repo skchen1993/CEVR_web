@@ -1,3 +1,4 @@
+<script>
 function hover(img)
 {
  img.src = "img/Result_Website_HDR.png"
@@ -6,3 +7,4 @@ function hover(img)
 function hoverOut(img){
  img.src = "img/Result_Website_LDR.png"
 }
+</script>
