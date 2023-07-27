@@ -29,6 +29,16 @@
     <script src="js/video_comparison.js"></script>
     <script src="js/result.js"></script>
 </head>
+
+
+<style>
+.responsive
+{
+width: 100%
+}
+</style>
+
+
 <body>
     <div class="container" id="main">
         <div class="row">
@@ -165,6 +175,8 @@ Deep learning is commonly used to produce impressive results in reconstructing H
         </div>
 
 
+
+
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -174,9 +186,12 @@ Deep learning is commonly used to produce impressive results in reconstructing H
                 CEVR results on the VDS and HDREye dataset!!
                 </p>
                     <div class="image-container_result">
-                        <img id='LDRImg' src="img/Result_Website_LDR.png" onmouseover="hover(this)" onmouseout="hoverOut(this)"/>
+                          <!-- <img id='LDRImg' src="img/Result_Website_LDR.png" onmouseover="hover(this)" onmouseout="hoverOut(this)"/> -->
                           <!-- <img src="img/Result_Website_LDR.png" alt="Image 1" id="img_result1"> -->
                           <!-- <img src="img/Result_Website_HDR.png" alt="Image 2" id="img_result2"> -->
+                          <img src="img/Result_Website_LDR.png" class="responsive"
+                          onmouseover="changeImage(1,this)"
+                          onmouseout="changeImage(2,this)">
                     </div>
                 </p>
             </div>
