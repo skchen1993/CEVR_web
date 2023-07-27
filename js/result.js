@@ -1,7 +1,7 @@
 <script>
-const container = document.querySelector('.image-container');
-const img1 = document.getElementById('img1');
-const img2 = document.getElementById('img2');
+const container = document.querySelector('.image-container_result');
+const img1 = document.getElementById('img_result');
+const img2 = document.getElementById('img_result');
 
 container.addEventListener('mousemove', (e) => {
   const { left, top, width, height } = container.getBoundingClientRect();
