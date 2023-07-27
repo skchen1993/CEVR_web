@@ -175,8 +175,9 @@ span.highlight {
 .image-container_result {
   position: relative;
   width: 1000px; /* Adjust the width and height as per your images */
-  height: 500px;
+  height: 400px;
   overflow: hidden;
+  left: -20px; /* Shift the container 20 pixels to the left */
 }
 
 .image-container_result img {
