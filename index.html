@@ -16,14 +16,22 @@
     </style>
 
     <style type="text/css">
-    .tg  {border-collapse:collapse;border-spacing:0;}
-    .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-      overflow:hidden;padding:10px 5px;word-break:normal;}
-    .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-      font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-    .tg .tg-eiei{background-color:#ffffff;border-color:#9b9b9b;color:#009901;font-weight:bold;text-align:center;vertical-align:middle}
-    .tg .tg-7s0l{background-color:#ffffff;border-color:#9b9b9b;color:#000000;font-weight:bold;text-align:center;vertical-align:middle}
-    .tg .tg-jb0k{background-color:#ffffff;border-color:#9b9b9b;color:#000000;text-align:center;vertical-align:middle}
+        /* Add a container class to center the table */
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Adjust the height if needed */
+        }
+
+        .tg  {border-collapse:collapse;border-spacing:0;}
+        .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+            font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+        .tg .tg-eiei{background-color:#ffffff;border-color:#9b9b9b;color:#009901;font-weight:bold;text-align:center;vertical-align:middle}
+        .tg .tg-7s0l{background-color:#ffffff;border-color:#9b9b9b;color:#000000;font-weight:bold;text-align:center;vertical-align:middle}
+        .tg .tg-jb0k{background-color:#ffffff;border-color:#9b9b9b;color:#000000;text-align:center;vertical-align:middle}
     </style>
 
 
@@ -51,24 +59,7 @@
 </head>
 
 
-<!-- <style>
-.responsive
-{
-width: 100%
-}
-</style>
 
-
-<style type="text/css">
-.tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-.tg .tg-eiei{background-color:#ffffff;border-color:#9b9b9b;color:#009901;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-7s0l{background-color:#ffffff;border-color:#9b9b9b;color:#000000;font-weight:bold;text-align:center;vertical-align:middle}
-.tg .tg-jb0k{background-color:#ffffff;border-color:#9b9b9b;color:#000000;text-align:center;vertical-align:middle}
-</style> -->
 
 <body>
     <div class="container" id="main">
@@ -252,141 +243,143 @@ Deep learning is commonly used to produce impressive results in reconstructing H
 <!--                   <div class="image-container">
                     <img class="responsive-img" src="img/CEVR_Teaser.png" alt="Image Description">
                   </div> -->
-                <table class="tg">
-                    <thead>
-                      <tr>
-                        <th class="tg-7s0l" rowspan="3">Dataset</th>
-                        <th class="tg-7s0l" rowspan="3">Method</th>
-                        <th class="tg-7s0l" colspan="2">PSNR</th>
-                        <th class="tg-7s0l" colspan="2">PSNR</th>
-                        <th class="tg-7s0l" colspan="2" rowspan="2">HDR-VDP-2</th>
-                      </tr>
-                      <tr>
-                        <th class="tg-7s0l" colspan="2">RH's TMO</th>
-                        <th class="tg-7s0l" colspan="2">KK's TMO</th>
-                      </tr>
-                      <tr>
-                        <th class="tg-7s0l">mean</th>
-                        <th class="tg-7s0l">Sigma</th>
-                        <th class="tg-7s0l">mean</th>
-                        <th class="tg-7s0l">Sigma</th>
-                        <th class="tg-7s0l">mean</th>
-                        <th class="tg-7s0l">Sigma</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="tg-jb0k" rowspan="6">VDS</td>
-                        <td class="tg-jb0k">DrTMO</td>
-                        <td class="tg-jb0k">25.49</td>
-                        <td class="tg-jb0k">4.28</td>
-                        <td class="tg-jb0k">21.36</td>
-                        <td class="tg-jb0k">4.50</td>
-                        <td class="tg-jb0k">54.33</td>
-                        <td class="tg-jb0k">6.27</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-jb0k">Deep chain HDRi</td>
-                        <td class="tg-jb0k">30.86</td>
-                        <td class="tg-jb0k">3.36</td>
-                        <td class="tg-jb0k">24.54</td>
-                        <td class="tg-jb0k">4.01</td>
-                        <td class="tg-jb0k">56.36</td>
-                        <td class="tg-jb0k">4.41</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-jb0k">Deep recursive HDRI</td>
-                        <td class="tg-jb0k">32.99</td>
-                        <td class="tg-jb0k">2.81</td>
-                        <td class="tg-jb0k">28.02</td>
-                        <td class="tg-jb0k">3.50</td>
-                        <td class="tg-jb0k">57.15</td>
-                        <td class="tg-jb0k">4.35</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-jb0k">Santos et al.</td>
-                        <td class="tg-jb0k">22.56</td>
-                        <td class="tg-jb0k">2.68</td>
-                        <td class="tg-jb0k">18.23</td>
-                        <td class="tg-jb0k">3.53</td>
-                        <td class="tg-jb0k">53.51</td>
-                        <td class="tg-jb0k">4.76</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-jb0k">Liu et al.</td>
-                        <td class="tg-jb0k">30.89</td>
-                        <td class="tg-jb0k">3.27</td>
-                        <td class="tg-jb0k">28.00</td>
-                        <td class="tg-jb0k">4.11</td>
-                        <td class="tg-jb0k">56.97</td>
-                        <td class="tg-jb0k">6.15</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-jb0k">CEVR (Ours)</td>
-                        <td class="tg-eiei">34.67</td>
-                        <td class="tg-jb0k">3.50</td>
-                        <td class="tg-eiei">30.04</td>
-                        <td class="tg-jb0k">4.45</td>
-                        <td class="tg-eiei">59.00</td>
-                        <td class="tg-jb0k">5.78</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-jb0k" rowspan="6">HDREye</td>
-                        <td class="tg-jb0k">DrTMO</td>
-                        <td class="tg-jb0k">23.68</td>
-                        <td class="tg-jb0k">3.27</td>
-                        <td class="tg-jb0k">19.97</td>
-                        <td class="tg-jb0k">4.11</td>
-                        <td class="tg-jb0k">46.67</td>
-                        <td class="tg-jb0k">5.81</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-jb0k">Deep chain HDRi</td>
-                        <td class="tg-jb0k">25.77</td>
-                        <td class="tg-jb0k">2.44</td>
-                        <td class="tg-jb0k">22.62</td>
-                        <td class="tg-jb0k">3.39</td>
-                        <td class="tg-jb0k">49.80</td>
-                        <td class="tg-jb0k">5.97</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-jb0k">Deep recursive HDRI</td>
-                        <td class="tg-jb0k">26.28</td>
-                        <td class="tg-jb0k">2.70</td>
-                        <td class="tg-jb0k">24.62</td>
-                        <td class="tg-jb0k">2.90</td>
-                        <td class="tg-jb0k">52.63</td>
-                        <td class="tg-jb0k">4.84</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-jb0k">Santos et al.</td>
-                        <td class="tg-jb0k">19.89</td>
-                        <td class="tg-jb0k">2.46</td>
-                        <td class="tg-jb0k">19.00</td>
-                        <td class="tg-jb0k">3.06</td>
-                        <td class="tg-jb0k">49.97</td>
-                        <td class="tg-jb0k">5.44</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-jb0k">Liu et al.</td>
-                        <td class="tg-jb0k">26.25</td>
-                        <td class="tg-jb0k">3.08</td>
-                        <td class="tg-jb0k">24.67</td>
-                        <td class="tg-jb0k">3.54</td>
-                        <td class="tg-jb0k">50.33</td>
-                        <td class="tg-jb0k">6.67</td>
-                      </tr>
-                      <tr>
-                        <td class="tg-jb0k">CEVR (Ours)</td>
-                        <td class="tg-eiei">26.54</td>
-                        <td class="tg-jb0k">3.10</td>
-                        <td class="tg-eiei">24.81</td>
-                        <td class="tg-jb0k">2.91</td>
-                        <td class="tg-eiei">53.15</td>
-                        <td class="tg-jb0k">4.91</td>
-                      </tr>
-                    </tbody>
-                    </table>
+                <div class="table-container">
+                    <table class="tg">
+                        <thead>
+                          <tr>
+                            <th class="tg-7s0l" rowspan="3">Dataset</th>
+                            <th class="tg-7s0l" rowspan="3">Method</th>
+                            <th class="tg-7s0l" colspan="2">PSNR</th>
+                            <th class="tg-7s0l" colspan="2">PSNR</th>
+                            <th class="tg-7s0l" colspan="2" rowspan="2">HDR-VDP-2</th>
+                          </tr>
+                          <tr>
+                            <th class="tg-7s0l" colspan="2">RH's TMO</th>
+                            <th class="tg-7s0l" colspan="2">KK's TMO</th>
+                          </tr>
+                          <tr>
+                            <th class="tg-7s0l">mean</th>
+                            <th class="tg-7s0l">Sigma</th>
+                            <th class="tg-7s0l">mean</th>
+                            <th class="tg-7s0l">Sigma</th>
+                            <th class="tg-7s0l">mean</th>
+                            <th class="tg-7s0l">Sigma</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="tg-jb0k" rowspan="6">VDS</td>
+                            <td class="tg-jb0k">DrTMO</td>
+                            <td class="tg-jb0k">25.49</td>
+                            <td class="tg-jb0k">4.28</td>
+                            <td class="tg-jb0k">21.36</td>
+                            <td class="tg-jb0k">4.50</td>
+                            <td class="tg-jb0k">54.33</td>
+                            <td class="tg-jb0k">6.27</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-jb0k">Deep chain HDRi</td>
+                            <td class="tg-jb0k">30.86</td>
+                            <td class="tg-jb0k">3.36</td>
+                            <td class="tg-jb0k">24.54</td>
+                            <td class="tg-jb0k">4.01</td>
+                            <td class="tg-jb0k">56.36</td>
+                            <td class="tg-jb0k">4.41</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-jb0k">Deep recursive HDRI</td>
+                            <td class="tg-jb0k">32.99</td>
+                            <td class="tg-jb0k">2.81</td>
+                            <td class="tg-jb0k">28.02</td>
+                            <td class="tg-jb0k">3.50</td>
+                            <td class="tg-jb0k">57.15</td>
+                            <td class="tg-jb0k">4.35</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-jb0k">Santos et al.</td>
+                            <td class="tg-jb0k">22.56</td>
+                            <td class="tg-jb0k">2.68</td>
+                            <td class="tg-jb0k">18.23</td>
+                            <td class="tg-jb0k">3.53</td>
+                            <td class="tg-jb0k">53.51</td>
+                            <td class="tg-jb0k">4.76</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-jb0k">Liu et al.</td>
+                            <td class="tg-jb0k">30.89</td>
+                            <td class="tg-jb0k">3.27</td>
+                            <td class="tg-jb0k">28.00</td>
+                            <td class="tg-jb0k">4.11</td>
+                            <td class="tg-jb0k">56.97</td>
+                            <td class="tg-jb0k">6.15</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-jb0k">CEVR (Ours)</td>
+                            <td class="tg-eiei">34.67</td>
+                            <td class="tg-jb0k">3.50</td>
+                            <td class="tg-eiei">30.04</td>
+                            <td class="tg-jb0k">4.45</td>
+                            <td class="tg-eiei">59.00</td>
+                            <td class="tg-jb0k">5.78</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-jb0k" rowspan="6">HDREye</td>
+                            <td class="tg-jb0k">DrTMO</td>
+                            <td class="tg-jb0k">23.68</td>
+                            <td class="tg-jb0k">3.27</td>
+                            <td class="tg-jb0k">19.97</td>
+                            <td class="tg-jb0k">4.11</td>
+                            <td class="tg-jb0k">46.67</td>
+                            <td class="tg-jb0k">5.81</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-jb0k">Deep chain HDRi</td>
+                            <td class="tg-jb0k">25.77</td>
+                            <td class="tg-jb0k">2.44</td>
+                            <td class="tg-jb0k">22.62</td>
+                            <td class="tg-jb0k">3.39</td>
+                            <td class="tg-jb0k">49.80</td>
+                            <td class="tg-jb0k">5.97</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-jb0k">Deep recursive HDRI</td>
+                            <td class="tg-jb0k">26.28</td>
+                            <td class="tg-jb0k">2.70</td>
+                            <td class="tg-jb0k">24.62</td>
+                            <td class="tg-jb0k">2.90</td>
+                            <td class="tg-jb0k">52.63</td>
+                            <td class="tg-jb0k">4.84</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-jb0k">Santos et al.</td>
+                            <td class="tg-jb0k">19.89</td>
+                            <td class="tg-jb0k">2.46</td>
+                            <td class="tg-jb0k">19.00</td>
+                            <td class="tg-jb0k">3.06</td>
+                            <td class="tg-jb0k">49.97</td>
+                            <td class="tg-jb0k">5.44</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-jb0k">Liu et al.</td>
+                            <td class="tg-jb0k">26.25</td>
+                            <td class="tg-jb0k">3.08</td>
+                            <td class="tg-jb0k">24.67</td>
+                            <td class="tg-jb0k">3.54</td>
+                            <td class="tg-jb0k">50.33</td>
+                            <td class="tg-jb0k">6.67</td>
+                          </tr>
+                          <tr>
+                            <td class="tg-jb0k">CEVR (Ours)</td>
+                            <td class="tg-eiei">26.54</td>
+                            <td class="tg-jb0k">3.10</td>
+                            <td class="tg-eiei">24.81</td>
+                            <td class="tg-jb0k">2.91</td>
+                            <td class="tg-eiei">53.15</td>
+                            <td class="tg-jb0k">4.91</td>
+                          </tr>
+                        </tbody>
+                        </table>
+                    </div>
                 </div>
               </div>
         </div>
