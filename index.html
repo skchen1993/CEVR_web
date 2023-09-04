@@ -39,7 +39,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚙</text></svg>">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
@@ -63,10 +63,13 @@
 
 
 <body>
+
     <div class="container" id="main">
         <div class="row">
             <h2 class="col-md-12 text-center">
-                <b>CEVR</b>: Learning Continuous Exposure Value Representations for Single-Image HDR Reconstruction</br> 
+                <b>CEVR</b>: Learning Continuous Exposure Value
+            </br>
+                Representations for Single-Image HDR Reconstruction</br> 
                 <small>
                 ICCV 2023
                 </small>
@@ -123,36 +126,30 @@
 
 
         <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center">
+                <div class="col-sm-6 col-sm-offset-3 text-center">
                     <ul class="nav nav-pills nav-justified">
                         <li>
-                            <a href="">
-                            <image src="img/Paper_img.PNG" height="60px">
+                            <a href="http://vllab.cs.nctu.edu.tw/images/paper/iccv-chen23.pdf">
+                            <image src="img/paper_thumbnail.jpg" height="60px">
                                 <h4><strong>Paper</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="">
-                            <image src="img/SUPP_pdf.PNG" height="60px">
-                                <h4><strong>Supp</strong></h4>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
+                            <a href="https://www.youtube.com/watch?v=Az8W2lGegcg">
                             <image src="img/youtube_icon.png" height="60px">
                                 <h4><strong>Video</strong></h4>
                             </a>
                         </li>
                         <li>
                             <a href="https://drive.google.com/file/d/1xeCT3APYkTnxeotb_t0wxdSPzBLbnU_p/view?usp=sharing">
-                            <image src="img/ZIPImage.png" height="60px">
-                                <h4><strong>Evaluation</strong></h4>
+                            <image src="img/evaluation_results_teaser.jpg" height="60px">
+                                <h4><strong>Evaluation</br>results</strong></h4>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/skchen1993/2023_CEVR">
+                            <a href="">
                             <image src="img/github.png" height="60px">
-                                <h4><strong>Github</strong></h4>
+                                <h4><strong>Code</br>[coming soon]</strong></h4>
                             </a>
                         </li>
                     </ul>
@@ -185,7 +182,7 @@ Deep learning is commonly used to produce impressive results in reconstructing H
 
 
 <br>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
                     Video
@@ -194,9 +191,93 @@ Deep learning is commonly used to produce impressive results in reconstructing H
                   <source src="img/DemoVideo.mp4" type="video/mp4">
                 </video>
             </div>
+        </div> -->
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+              <h3>
+                  Video
+              </h3>
+              <div class="text-center">
+                  <div style="position:relative;padding-top:56.25%;">
+                      <iframe src="https://www.youtube.com/embed/Az8W2lGegcg" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                  </div>
+              </div>
+          </div>
+      </div>
+<br>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Continuous LDR stack
+                </h3>
+                <br>
+                <image src="img/continuous.jpg" style="width:100%;" class="img-responsive center-block" alt="overview"></image>
+                <br>
+                <p class="text-justify">
+                  Traditional indirect methods use LDR images with predefined exposure values to construct the stack. In contrast, our approach explores continuous exposure value information, constructing a denser stack that includes LDR images with previously unseen continuous exposure values. We call this denser stack the continuous LDR stack. Compared to existing indirect methods, our approach, the continuous LDR stack, has the ability to recover a more accurate inverse camera response function, therefore enhancing the quality of the final HDR result.
+                </p>
+            </div>
+        </div>
+
+<br>
+
+
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Continuous Exposure Value Representation (CEVR)
+                </h3>
+				<!-- <table style="width: 100%; border-collapse: collapse;"> -->
+				  <tr>
+				    <td style="text-align: center;">
+		                <video id="v0" width="100%" autoplay loop muted>
+		                  <source src="img/cevr.mp4" type="video/mp4" />
+		                </video>
+					</td>
+				  </tr>
+				<!-- </table> -->
+                <p class="text-justify">
+                  In order to generate the continuous LDR stack, we propose the CEVR model, which can generate LDR images with arbitrary exposure values. The generated LDR images with continuous exposure values are used to construct the continuous LDR stack.
+                </p>
+            </div>
         </div>
 <br>
         <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Cycle training
+                </h3>
+                <br>
+                <image src="img/cycle.jpg" style="width:100%;" class="img-responsive center-block" alt="overview"></image>
+                <br>
+                <p class="text-justify">
+                  For those exposure values without corresponding ground truth, how can CEVR understand the meaning of unseen exposure values during the training phase and generate a reasonable result? To address this challenge, we designed a novel training strategy called cycle training. This strategy involves two branches: one follows the conventional training approach, while the other branch divides the target exposure value into two incremental steps. These divided values are then processed through the CEVR model twice, and the sum of these two steps equals the target exposure value. Through this approach, our model learns explicit insights into exposure value variations and gets supervisory signals for exposure values without ground truth.
+                </p>
+            </div>
+        </div>
+
+<br>
+
+        <!-- <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    LDR images generation with arbitrary EVs
+                </h3>
+                <p class="text-justify">
+                CEVR visual results on the VDS and HDREye dataset!!
+                </p>
+                    <div class="image-container_result">
+                          <img src="img/Result_Website_LDR.png" class="responsive"
+                          onmouseover="changeImage(1,this)"
+                          onmouseout="changeImage(2,this)">
+                    </div>
+                </p>
+            </div>
+        </div>
+<br> -->
+        <!-- <div class="row">
                 <div class="col-md-8 col-md-offset-2">
                     <h3>
                     Evaluation Result
@@ -213,45 +294,58 @@ Deep learning is commonly used to produce impressive results in reconstructing H
                         </li>
                     </ul>
                 </div>
-        </div>
+        </div> -->
 
 
-
+        
 
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Qualitative result
+                    Evaluation results (3.3G)
                 </h3>
-                <p class="text-justify">
+                <!-- <p class="text-justify">
                 CEVR visual results on the VDS and HDREye dataset!!
-                </p>
-                    <div class="image-container_result">
-                          <!-- <img id='LDRImg' src="img/Result_Website_LDR.png" onmouseover="hover(this)" onmouseout="hoverOut(this)"/> -->
-                          <!-- <img src="img/Result_Website_LDR.png" alt="Image 1" id="img_result1"> -->
-                          <!-- <img src="img/Result_Website_HDR.png" alt="Image 2" id="img_result2"> -->
-                          <img src="img/Result_Website_LDR.png" class="responsive"
-                          onmouseover="changeImage(1,this)"
-                          onmouseout="changeImage(2,this)">
+                </p> -->
+                <br>
+                    <div class="one" onmouseout="ccc_stop()" onmouseover="ccc_start()">
+                      <div class="two" id='ccc_image'><a href="https://drive.google.com/file/d/1xeCT3APYkTnxeotb_t0wxdSPzBLbnU_p/view?usp=sharing"><img src='img/Result_Website_HDR.png' class="responsive"></a></div>
+                      <a href="https://drive.google.com/file/d/1xeCT3APYkTnxeotb_t0wxdSPzBLbnU_p/view?usp=sharing"><img src='img/Result_Website_LDR.png' class="responsive"></a>
                     </div>
+                    <script type="text/javascript">
+                      function ccc_start() {
+                        document.getElementById('ccc_image').style.opacity = "1";
+                      }
+
+                      function ccc_stop() {
+                        document.getElementById('ccc_image').style.opacity = "0";
+                      }
+                      ccc_stop()
+                    </script>
+                    <br>
+                  <p class="text-justify">
+                    We provide a <a href="https://drive.google.com/file/d/1xeCT3APYkTnxeotb_t0wxdSPzBLbnU_p/view?usp=sharing">ZIP file</a> containing each compared method's results and the Matlab script for the evaluation of two datasets: the VDS dataset and the HDREye dataset. You can download the ZIP file and run the script to get the PSNR, HDR-VDP-2 score for the tone-mapped image, and HDR file.
+                  </p>
                 </p>
             </div>
         </div>
 
 
-
+<br>
         <div class="section">
           <!-- Icon Section -->
           <div class="row center">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
-                    Quantitative result
+                    Quantitative results
                 </h3>
 <!--                   <div class="image-container">
                     <img class="responsive-img" src="img/CEVR_Teaser.png" alt="Image Description">
                   </div> -->
-                <div class="table-container">
-                    <table class="tg">
+                <!-- <div class="table-container"> -->
+                    <!-- <table class="tg"> -->
+                  <div class="table_wrapper">
+                    <table class="table is-hoverable is-bordered">
                         <thead>
                           <tr>
                             <th class="tg-7s0l" rowspan="3">Dataset</th>
@@ -266,11 +360,11 @@ Deep learning is commonly used to produce impressive results in reconstructing H
                           </tr>
                           <tr>
                             <th class="tg-7s0l">mean</th>
-                            <th class="tg-7s0l">Sigma</th>
+                            <th class="tg-7s0l">std</th>
                             <th class="tg-7s0l">mean</th>
-                            <th class="tg-7s0l">Sigma</th>
+                            <th class="tg-7s0l">std</th>
                             <th class="tg-7s0l">mean</th>
-                            <th class="tg-7s0l">Sigma</th>
+                            <th class="tg-7s0l">std</th>
                           </tr>
                         </thead>
                         <tbody>
@@ -322,11 +416,11 @@ Deep learning is commonly used to produce impressive results in reconstructing H
                           </tr>
                           <tr>
                             <td class="tg-jb0k">CEVR (Ours)</td>
-                            <td class="tg-eiei">34.67</td>
+                            <td class="tg-eiei"><p style="color:red;"><b>34.67</b></p></td>
                             <td class="tg-jb0k">3.50</td>
-                            <td class="tg-eiei">30.04</td>
+                            <td class="tg-eiei"><p style="color:red;"><b>30.04</b></p></td>
                             <td class="tg-jb0k">4.45</td>
-                            <td class="tg-eiei">59.00</td>
+                            <td class="tg-eiei"><p style="color:red;"><b>59.00</b></p></td>
                             <td class="tg-jb0k">5.78</td>
                           </tr>
                           <tr>
@@ -377,21 +471,24 @@ Deep learning is commonly used to produce impressive results in reconstructing H
                           </tr>
                           <tr>
                             <td class="tg-jb0k">CEVR (Ours)</td>
-                            <td class="tg-eiei">26.54</td>
+                            <td class="tg-eiei"><p style="color:red;"><b>26.54</b></p></td>
                             <td class="tg-jb0k">3.10</td>
-                            <td class="tg-eiei">24.81</td>
+                            <td class="tg-eiei"><p style="color:red;"><b>24.81</b></p></td>
                             <td class="tg-jb0k">2.91</td>
-                            <td class="tg-eiei">53.15</td>
+                            <td class="tg-eiei"><p style="color:red;"><b>53.15</b></p></td>
                             <td class="tg-jb0k">4.91</td>
                           </tr>
                         </tbody>
                         </table>
                     </div>
+                    <p class="text-justify">
+                      Compared to other existing methods, our work demonstrates competitive performance.
+                    </p>
                 </div>
               </div>
         </div>
 
-
+<br>
         <div class="row">
             <div class="col-md-50 col-md-offset-2">
                 <h3>
@@ -409,7 +506,7 @@ Deep learning is commonly used to produce impressive results in reconstructing H
                 </div>
             </div>
         </div>
-
+        <br>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <h3>
@@ -418,7 +515,7 @@ Deep learning is commonly used to produce impressive results in reconstructing H
                 <p class="text-justify">
                 This work was supported in part by National Science and Technology Council (NSTC) under grants 111-2628-E-A49-025-MY3, 112-2221-E-A49-090-MY3, 111-2634-F-002-023, 111-2634-F-006-012, 110-2221-E-A49-065-MY3 and 111-2634-F-A49-010. This work was funded in part by MediaTek.
                     <br><br>
-                The website template was borrowed from <a href="https://github.com/jonbarron/website/">Jon Barron</a>.
+                The website template was borrowed from <a href="https://jonbarron.info/zipnerf/">Zip-NeRF</a>.
                 </p>
             </div>
         </div>
